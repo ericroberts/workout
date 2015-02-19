@@ -1,0 +1,22 @@
+$columns: 12
+$column-gutter: 1rem
+
+@mixin container
+  max-width: 60rem
+  margin: 0 auto
+
+@mixin row
+  margin-left: -$column-gutter
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+@mixin columns($number)
+  float: left
+  margin-left: $column-gutter
+  margin-bottom: $column-gutter
+
+  $width: percentage($number/$columns)
+  width: calc(#{$width} - #{$column-gutter})
