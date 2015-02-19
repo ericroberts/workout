@@ -15,6 +15,7 @@ gem "uglifier", ">= 1.3.0"
 group :development do
   gem "quiet_assets"
   gem "rack-mini-profiler"
+  gem "rubocop"
 end
 
 group :development, :test do
@@ -23,7 +24,6 @@ group :development, :test do
   gem "dotenv-rails"
   gem "pry"
   gem "rspec-rails"
-  gem "rubocop"
   gem "spring"
   gem "web-console", "~> 2.0"
 end

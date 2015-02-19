@@ -1,0 +1,19 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'spec/*_helper.rb'
+    - 'bin/*'
+    - 'Rakefile'
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+Style/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Style/Documentation:
+  Enabled: false
