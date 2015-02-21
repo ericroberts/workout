@@ -6,17 +6,19 @@ $column-gutter: 1rem
   margin: 0 auto
 
 @mixin row
-  margin-left: -$column-gutter
-
   &:after
     content: ""
     display: table
     clear: both
 
 @mixin columns($number)
-  float: left
-  margin-left: $column-gutter
-  margin-bottom: $column-gutter
+  $base-width: percentage($number/$columns)
+  $extra-width: ($column-gutter / $columns) * $number
 
-  $width: percentage($number/$columns)
-  width: calc(#{$width} - #{$column-gutter})
+  float: left
+  margin-right: $column-gutter
+  margin-bottom: $column-gutter
+  width: calc(#{$base-width} - #{$column-gutter} + #{$extra-width})
+
+  &:last-child
+    margin-right: 0
