@@ -1,12 +1,9 @@
-p#notice = notice
+dl
+  dt Name
+  dd= @training_plan.name
+  dt Description
+  dd= @training_plan.description
 
-p
-  strong Name:
-  = @training_plan.name
-p
-  strong Description:
-  = @training_plan.description
-
-= link_to 'Edit', edit_training_plan_path(@training_plan)
-'|
-= link_to 'Back', training_plans_path
+ul.w-actions
+  li= link_to 'Edit', edit_training_plan_path(@training_plan)
+  li= link_to 'Back', training_plans_path

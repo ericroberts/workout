@@ -1,16 +1,18 @@
 $ ->
+  inputs = "input, textarea"
+
   setFilledState = ->
     if $(this).val()
       $(this).closest(".input").addClass("filled")
     else
       $(this).closest(".input").removeClass("filled")
 
-  $("input").each setFilledState
+  $(inputs).each setFilledState
 
-  $("input").change setFilledState
+  $(inputs).change setFilledState
 
-  $("input").focus ->
+  $(inputs).focus ->
     $(this).closest(".input").addClass("focused")
 
-  $("input").blur ->
+  $(inputs).blur ->
     $(this).closest(".input").removeClass("focused")

@@ -1,9 +1,9 @@
-= simple_form_for @training_plan do |f|
+= simple_form_for @training_plan, html: { class: 'w-form' } do |f|
   = f.error_notification
 
-  .form-inputs
+  .w-form-inputs
     = f.input :name
     = f.input :description
 
-  .form-actions
-    = f.button :submit
+  .w-form-actions
+    button.w-btn Save

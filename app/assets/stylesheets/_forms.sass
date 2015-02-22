@@ -1,6 +1,8 @@
 .w-form-inputs
   .input.email,
-  .input.password
+  .input.password,
+  .input.string,
+  .input.text
     margin-bottom: 1rem
     position: relative
 
@@ -36,7 +38,8 @@
 
       font-size: $input-font-size*0.8
 
-    input
+    input,
+    textarea
       width: calc(100% - 8rem)
       height: $input-height
       padding: $input-padding
@@ -75,4 +78,4 @@ label input[type="checkbox"]
   margin-right: 0.5rem
 
 .w-form-actions
-  padding: 1rem 0 2rem 0
+  margin-bottom: 2rem

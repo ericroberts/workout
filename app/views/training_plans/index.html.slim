@@ -1,23 +1,21 @@
-h1 Listing training_plans
+h1 Training Plans
 
-table
+table.w-table
   thead
     tr
       th Name
       th Description
-      th
-      th
-      th
+      th Actions
 
   tbody
     - @training_plans.each do |training_plan|
       tr
-        td = training_plan.name
-        td = training_plan.description
-        td = link_to 'Show', training_plan
-        td = link_to 'Edit', edit_training_plan_path(training_plan)
-        td = link_to 'Destroy', training_plan, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td= training_plan.name
+        td= training_plan.description
+        td.w-table-actions
+          ul.w-actions
+            li= link_to 'Show', training_plan
+            li= link_to 'Edit', edit_training_plan_path(training_plan)
+            li= link_to 'Destroy', training_plan, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-br
-
-= link_to 'New Training plan', new_training_plan_path
+= link_to 'New Training Plan', new_training_plan_path, class: 'w-btn'

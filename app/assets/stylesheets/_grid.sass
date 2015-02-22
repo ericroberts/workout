@@ -6,10 +6,7 @@ $column-gutter: 1rem
   margin: 0 auto
 
 @mixin row
-  &:after
-    content: ""
-    display: table
-    clear: both
+  @extend %clearfix
 
 @mixin columns($number)
   $base-width: percentage($number/$columns)
