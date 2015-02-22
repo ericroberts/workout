@@ -1,0 +1,18 @@
+.w-devise-signup
+  h1 Sign up
+
+  = simple_form_for resource,
+                    as: resource_name,
+                    url: registration_path(resource_name),
+                    html: { class: 'w-form' } do |f|
+
+    = f.error_notification
+
+    .w-form-inputs
+      = f.input :email
+      = f.input :password
+
+    .w-form-actions
+      button.w-btn Sign up
+
+  = render "devise/shared/links"

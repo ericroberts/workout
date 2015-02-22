@@ -1,0 +1,78 @@
+.w-form-inputs
+  .input.email,
+  .input.password
+    margin-bottom: 1rem
+    position: relative
+
+    $input-padding: 1.5rem
+    $input-font-size: 1.2rem
+    $input-height: $input-padding*2 + $input-font-size
+
+    label
+      display: block
+      width: 100%
+      height: $input-height
+      padding: $input-padding
+      border-radius: $global-radius
+
+      position: absolute
+      top: 0
+      right: 0
+
+      background: darken($clouds, 3)
+
+      color: $silver
+      font-size: $input-font-size
+      line-height: $input-font-size
+
+      transition: 0.2s all
+
+    &.focused label,
+    &.filled label
+      width: 8rem
+      border-radius: 0 $global-radius $global-radius 0
+
+      position: absolute
+
+      font-size: $input-font-size*0.8
+
+    input
+      width: calc(100% - 8rem)
+      height: $input-height
+      padding: $input-padding
+      border: none
+      border-radius: $global-radius
+
+      background: $white
+
+      font-size: $input-font-size
+      line-height: $input-font-size
+
+      &:focus
+        outline: none
+        border-radius: $global-radius 0 0 $global-radius
+
+    &.filled input
+      border-radius: $global-radius 0 0 $global-radius
+
+    .error
+      display: block
+      padding: 0.25rem $input-padding
+      border-bottom: 2px solid $pomegranate
+      border-radius: 0 0 $global-radius $global-radius
+
+      background: $alizarin
+
+      color: $white
+      font-size: 0.8rem
+      font-weight: 300
+
+    .hint
+      display: block
+      font-size: 0.8rem
+
+label input[type="checkbox"]
+  margin-right: 0.5rem
+
+.w-form-actions
+  padding: 1rem 0 2rem 0
